@@ -307,7 +307,7 @@
                                 <goal>single</goal>
                             </goals>
                             <configuration>
-                                <!--ÐÞ¸ÄappendÎªfalse£¬Ê¹²å¼þjar°üÃû³Æ²»°üº¬¡°openfire-plugin-assembly¡±-->
+                                <!--ä¿®æ”¹appendä¸ºfalseï¼Œä½¿æ’ä»¶jaråŒ…åç§°ä¸åŒ…å«â€œopenfire-plugin-assemblyâ€-->
                                 <appendAssemblyId>false</appendAssemblyId>
                                 <finalName>${plugin.name}</finalName>
                                 <attach>true</attach>
@@ -316,7 +316,7 @@
                                     <descriptorRef>openfire-plugin-assembly</descriptorRef>
                                 </descriptorRefs>
 
-                                <!--ÐÞ¸ÄÄ¬ÈÏµÄµØÖ·${project.build.directory} by cy-->
+                                <!--ä¿®æ”¹é»˜è®¤çš„åœ°å€${project.build.directory} by cy-->
                                 <outputDirectory>${project.parent.relativePath}${file.separator}..${file.separator}..${file.separator}distribution${file.separator}target${file.separator}distribution-base${file.separator}plugins</outputDirectory>
                             </configuration>
                         </execution>
