@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin>
+   <class>org.jivesoftware.openfire.plugin.fwexample.ExamplePlugin</class>
+   <name>${plugin.name}</name>
+   <description>An example plugin that prints xmpp messages.</description>
+   <author>Shineych</author>
+   <version>${project.version}</version>
+   <date>02/20/2021</date>
+   <minServerVersion>4.3.0</minServerVersion>
+    <!-- And if it won't work after:
+   <maxServerVersion>4.7.0</maxServerVersion>
+   -->
+    <minJavaVersion>1.8</minJavaVersion>
+
+<!--   <adminconsole>-->
+<!--      <tab id="tab-server">-->
+<!--         <sidebar id="sidebar-server-settings">-->
+<!--            <item id="example-plugin-page" name="Example Plugin Properties" url="exampleplugin-page.jsp" description="Settings for Example Plugin" />-->
+<!--         </sidebar>-->
+<!--      </tab>-->
+<!--   </adminconsole>-->
+
+    <!--菜单置于：服务器->服务器设置-->
+    <adminconsole>
+        <tab id="tab-server">
+            <sidebar id="sidebar-server-settings">
+                <item id="fwexample-conf"
+                      name="${plugin.fwexample.siderbar.title}"
+                      url="example-conf.jsp"
+                      description="${plugin.fwexample.siderbar.descr}" />
+            </sidebar>
+        </tab>
+    </adminconsole>
+</plugin>
