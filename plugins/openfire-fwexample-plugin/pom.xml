@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>plugins</artifactId>
+        <groupId>org.igniterealtime.openfire</groupId>
+        <version>4.7.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.igniterealtime.openfire</groupId>
+    <artifactId>fwexample</artifactId>
+    <version>1.0.2-SNAPSHOT</version>
+    
+    <name>Openfire FwExample Plugin</name>
+    <description>A facewhat demo for openfire plugin development.</description>
+
+    <developers>
+        <developer>
+            <id>shineych</id>
+            <name>Chen Yi</name>
+            <email>shineychchina@163.com</email>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <properties>
+        <openfire.version>4.7.0-SNAPSHOT</openfire.version>
+        <jetty.version>9.4.35.v20201120</jetty.version>
+    </properties>
+
+    <build>
+        <sourceDirectory>src/java</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-jspc-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- Admin console pages -->
+<!--            <plugin>-->
+<!--                <groupId>org.eclipse.jetty</groupId>-->
+<!--                <artifactId>jetty-jspc-maven-plugin</artifactId>-->
+<!--                <version>${jetty.version}</version>-->
+<!--                <configuration>-->
+<!--                    <webAppSourceDirectory>${project.build.sourceDirectory}/../web</webAppSourceDirectory>-->
+<!--                    <webXml>${project.build.sourceDirectory}/../web/WEB-INF/web.xml</webXml>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>jspc</id>-->
+<!--                        <goals>-->
+<!--                            <goal>jspc</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <jspc>-->
+<!--                                <package>org.jivesoftware.openfire.plugin.${project.artifactId}</package>-->
+<!--                            </jspc>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <dependencies>-->
+<!--                    <dependency>-->
+<!--                        <groupId>org.igniterealtime.openfire</groupId>-->
+<!--                        <artifactId>xmppserver</artifactId>-->
+<!--                        <version>${openfire.version}</version>-->
+<!--                    </dependency>-->
+<!--&lt;!&ndash;                    <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <groupId>org.igniterealtime.openfire</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <artifactId>webadmintld</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <version>${openfire.version}</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </dependency>&ndash;&gt;-->
+<!--                </dependencies>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.felix</groupId>-->
+<!--                <artifactId>maven-bundle-plugin</artifactId>-->
+<!--                <version>4.2.0</version>-->
+<!--                <extensions>true</extensions>-->
+<!--            </plugin>-->
+
+            <!--明天再来看-->
+
+        </plugins>
+    </build>
+
+</project>

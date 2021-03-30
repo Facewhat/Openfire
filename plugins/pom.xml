@@ -93,6 +93,7 @@
 
     <modules>
         <module>openfire-plugin-assembly-descriptor</module>
+        <module>openfire-fwexample-plugin</module>
     </modules>
 
     <organization>
