@@ -306,13 +306,17 @@
                                 <goal>single</goal>
                             </goals>
                             <configuration>
-                                <appendAssemblyId>true</appendAssemblyId>
+                                <!--修改append为false，使插件jar包名称不包含“openfire-plugin-assembly”-->
+                                <appendAssemblyId>false</appendAssemblyId>
                                 <finalName>${plugin.name}</finalName>
                                 <attach>true</attach>
                                 <!-- This is where we use our shared assembly descriptor -->
                                 <descriptorRefs>
                                     <descriptorRef>openfire-plugin-assembly</descriptorRef>
                                 </descriptorRefs>
+
+                                <!--修改默认的地址${project.build.directory} by cy-->
+                                <outputDirectory>${project.parent.relativePath}${file.separator}..${file.separator}..${file.separator}distribution${file.separator}target${file.separator}distribution-base${file.separator}plugins</outputDirectory>
                             </configuration>
                         </execution>
                     </executions>
